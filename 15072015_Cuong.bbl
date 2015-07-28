@@ -1,0 +1,60 @@
+\begin{thebibliography}{7}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Krizhevsky et~al.(2012)Krizhevsky, Sutskever, and
+  Hinton]{NIPS2012_4824}
+A.~Krizhevsky, I.~Sutskever, and G.~E. Hinton.
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock In F.~Pereira, C.~Burges, L.~Bottou, and K.~Weinberger, editors,
+  \emph{Advances in Neural Information Processing Systems 25}, pages
+  1097--1105. Curran Associates, Inc., 2012.
+
+\bibitem[LeCun et~al.(1990)LeCun, Boser, Denker, Henderson, Howard, Hubbard,
+  and Jackel]{NIPS1989_293}
+Y.~LeCun, B.~E. Boser, J.~S. Denker, D.~Henderson, R.~E. Howard, W.~E. Hubbard,
+  and L.~D. Jackel.
+\newblock Handwritten digit recognition with a back-propagation network.
+\newblock In D.~Touretzky, editor, \emph{Advances in Neural Information
+  Processing Systems 2}, pages 396--404. Morgan-Kaufmann, 1990.
+
+\bibitem[Lin et~al.(2013)Lin, Chen, and Yan]{DBLP:journals/corr/LinCY13}
+M.~Lin, Q.~Chen, and S.~Yan.
+\newblock Network in network.
+\newblock \emph{CoRR}, abs/1312.4400, 2013.
+\newblock URL \url{http://arxiv.org/abs/1312.4400}.
+
+\bibitem[Lowe(2004)]{Lowe:2004:DIF:993451.996342}
+D.~G. Lowe.
+\newblock Distinctive image features from scale-invariant keypoints.
+\newblock \emph{Int. J. Comput. Vision}, 60\penalty0 (2):\penalty0 91--110,
+  Nov. 2004.
+\newblock ISSN 0920-5691.
+\newblock \doi{10.1023/B:VISI.0000029664.99615.94}.
+
+\bibitem[Srivastava et~al.(2014)Srivastava, Hinton, Krizhevsky, Sutskever, and
+  Salakhutdinov]{JMLR:v15:srivastava14a}
+N.~Srivastava, G.~Hinton, A.~Krizhevsky, I.~Sutskever, and R.~Salakhutdinov.
+\newblock Dropout: A simple way to prevent neural networks from overfitting.
+\newblock \emph{Journal of Machine Learning Research}, 15:\penalty0 1929--1958,
+  2014.
+\newblock URL \url{http://jmlr.org/papers/v15/srivastava14a.html}.
+
+\bibitem[Tompson et~al.(2014)Tompson, Jain, LeCun, and
+  Bregler]{DBLP:journals/corr/TompsonJLB14}
+J.~Tompson, A.~Jain, Y.~LeCun, and C.~Bregler.
+\newblock Joint training of a convolutional network and a graphical model for
+  human pose estimation.
+\newblock \emph{CoRR}, abs/1406.2984, 2014.
+\newblock URL \url{http://arxiv.org/abs/1406.2984}.
+
+\bibitem[Yann~LeCun(2015)]{lecun:deeplearning}
+G.~H. Yann~LeCun, Yoshua~Bengio.
+\newblock Deep learing.
+\newblock \emph{Nature Insight Review}, 521\penalty0 (5):\penalty0 436--444,
+  May 2015.
+
+\end{thebibliography}

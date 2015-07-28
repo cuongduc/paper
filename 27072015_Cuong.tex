@@ -1,0 +1,242 @@
+\documentclass{sig-alternate}
+\usepackage{natbib}
+\bibliographystyle{abbrvnat}
+
+\begin{document}
+%
+% --- Author Metadata here ---
+\conferenceinfo{SoICT 2015}{Hue, Vietnam}
+%\CopyrightYear{2007} % Allows default copyright year (20XX) to be over-ridden - IF NEED BE.
+%\crdata{0-12345-67-8/90/01}  % Allows default copyright data (0-89791-88-6/97/05) to be over-ridden - IF NEED BE.
+% --- End of Author Metadata ---
+
+% \title{Ship Image Classification using Deep Convolutional Neural Networks}
+\title{Classifying Ship Images using Deep Convolutional Neural Network}
+% \subtitle{[Extended Abstract]
+% \titlenote{A full version of this paper is available as
+% \textit{Author's Guide to Preparing ACM SIG Proceedings Using
+% \LaTeX$2_\epsilon$\ and BibTeX} at
+% \texttt{www.acm.org/eaddress.htm}}}
+%
+% You need the command \numberofauthors to handle the 'placement
+% and alignment' of the authors beneath the title.
+%
+% For aesthetic reasons, we recommend 'three authors at a time'
+% i.e. three 'name/affiliation blocks' be placed beneath the title.
+%
+% NOTE: You are NOT restricted in how many 'rows' of
+% "name/affiliations" may appear. We just ask that you restrict
+% the number of 'columns' to three.
+%
+% Because of the available 'opening page real-estate'
+% we ask you to refrain from putting more than six authors
+% (two rows with three columns) beneath the article title.
+% More than six makes the first-page appear very cluttered indeed.
+%
+% Use the \alignauthor commands to handle the names
+% and affiliations for an 'aesthetic maximum' of six authors.
+% Add names, affiliations, addresses for
+% the seventh etc. author(s) as the argument for the
+% \additionalauthors command.
+% These 'additional authors' will be output/set for you
+% without further effort on your part as the last section in
+% the body of your article BEFORE References or any Appendices.
+
+\numberofauthors{2} %  in this sample file, there are a *total*
+% of EIGHT authors. SIX appear on the 'first-page' (for formatting
+% reasons) and the remaining two appear in the \additionalauthors section.
+%
+\author{
+% You can go ahead and credit any number of authors here,
+% e.g. one 'row of three' or two rows (consisting of one row of three
+% and a second row of one, two or three).
+%
+% The command \alignauthor (no curly braces needed) should
+% precede each author name, affiliation/snail-mail address and
+% e-mail address. Additionally, tag each line of
+% affiliation/address with \affaddr, and tag the
+% e-mail address with \email.
+%
+% 1st. author
+\alignauthor
+Duc-Cuong Dao\\
+       % \affaddr{School of Information and Communication Technology}\\
+       \affaddr{Hanoi University of Science and Technology}\\
+       \affaddr{Hanoi, Vietnam}
+       \email{duccuong.hust@gmail.com}
+% 2nd. author
+\alignauthor
+Hua Xiaohui\\
+       \affaddr{Shanghai Jiaotong University}\\
+       \affaddr{Shanghai, China}
+       \email{sophiexhh@gmail.com}
+\and
+\alignauthor
+Olivier Mor\'{e}re\\
+       \affaddr{Agency for Science, Technology and Reasearch}\\
+       % \affaddr{P.O. Box 1212}\\
+       \affaddr{Singapore}\\
+       \email{olivier.morere@gmail.com}
+\alignauthor
+Antoine Veillard\\
+       \affaddr{Agency for Science, Technology and Reasearch}
+       \affaddr{Singapore}
+       \email{antoine.veillard@gmail.com}
+% \and
+% \alignauthor
+% Antoine Veillard\\
+%        \affaddr{Agency for Science, Technology and Reasearch}\\
+%        % \affaddr{P.O. Box 1212}\\
+%        \affaddr{Singapore}\\
+%        \email{antoine.veillard@gmail.com}
+}
+% There's nothing stopping you putting the seventh, eighth, etc.
+% author on the opening page (as the 'third row') but we ask,
+% for aesthetic reasons that you place these 'additional authors'
+% in the \additional authors block, viz.
+% \additionalauthors{Additional authors: John Smith (The Th{\o}rv{\"a}ld Group,
+% email: {\texttt{jsmith@affiliation.org}}) and Julius P.~Kumquat
+% (The Kumquat Consortium, email: {\texttt{jpkumquat@consortium.net}}).}
+% \date{30 July 1999}
+% Just remember to make sure that the TOTAL number of authors
+% is the number that will appear on the first page PLUS the
+% number that will appear in the \additionalauthors section.
+
+\maketitle
+\begin{abstract}
+Ship classification has attracted great interest in marine security and traffic control upon the rapid development of marine industry. [...] In this paper, we propose a ship image classification approach using Convolutional Neural Network (CNN) which have achieved higher accuracy and can classify much more types of ship compared to traditional approaches. Albeit the object classification task has recently been enjoyed a great success due to the advancement of CNNs combining with powerful GPU hardware as well as large public dataset; performance at ship classification has not constituted the same level of achievement. This might be because of the low suitability of pretrained models on ImageNet 
+\end{abstract}
+
+% A category with the (minimum) three required fields
+% \category{H.4}{Information Systems Applications}{Miscellaneous}
+%A category including the fourth, optional field follows...
+% \category{D.2.8}{Software Engineering}{Metrics}[complexity measures, performance measures]
+
+% \terms{Theory}
+
+\keywords{Deep learning, convolutional neural networks, image classification, ship classification}
+
+\section{Introduction}
+It is needless to say how important of image classification/recognition is in the field of computer vision - image recognition is essential for bridging the huge semantic gap between an image, which is simply a scatter of pixels to untrained computers, and the object it presents. Therefore, there have been extensive research efforts on developing effecitive visual object classifiers. .... feature extraction. In traditional approaches, image features (e.g., SIFT \citep{Lowe:2004:DIF:993451.996342}) are carefully hand-crafted (i.e., fixed by the engineers). This introduces a serious drawback when it comes to recoginizing/classifying natural patterns because natural features exist in variety of forms, shapes, directions, etc. ... will requires an enormously large amount of engineered features which turns out to be impossible in reality. 
+
+.... Deep-learning methods address the problem of learning hierarchical representations of features. They allow the computer to read raw data (e.g., image, text, speech, etc.) and \emph{automatically} discover the representations of those data with multiple levels of abstractions that needed for recognition/classification tasks.  
+% Since their introduction by in the early 1990's, Convolutional Neural Networks (ConvNets) have demonstrated excellent performance at tasks such as hand-written digit classification and face detection. Recently, serveral papers have shown that they can also deliver outstanding performance on more challenging visual classfication tasks. [Ciresan et al., 2012] demonstrate state-of-the-art performance on NORB and CIFAR-10 datasets. Most notably, [Krizhevsky et al., 2012] show record beating performance on the ImageNet 2012 classification benchmark, with their ConvNet model achieving an error rate of 16.4\%, compared to the 2nd place result of 26.1\%. Several factors are responsible for this renewed interest in ConvNet models: (i) the availibility of much larger training sets, with millions of labeled examples; (ii) powerful GPU implementations, making the traininPOKg of very large models practical and (iii) better model regularization, such as Dropout [Hinton et al., 2012]
+
+
+\section{Related Work}
+Starting with LeNet-5 \citep{NIPS1989_293}, ConvNets have typically had a standard structure - stacked convolutional layers (optionally followed by contrast normalization and max-pooling) are followed by one or more fully-connected layers. Variants of this basic design are prevalent in the image classification literature and have yielded the best results to-date on MNIST, CIFAR and most notably on the ImageNet classification challenge. For larger datasets such as Imagenet, the recent trend has been to increase the number of layer and layer size, while using dropout \citep{JMLR:v15:srivastava14a} to address the problem of overfitting.
+
+Despite the concerns that max-pooling layers result in loss of accurate spatial information, the same convolutional network archiecture as \citep{DBLP:journals/corr/TompsonJLB14} has aslo been sucessfully employed for localization, object detection and human post estimation. Inspire by a neuroscience model of the primate visual cortex, .. use a series of fixed Gabor filters of different sizes in order to handle multiple scales, similarly to the Incepttion model. However, contrary to the fixed 2-layer model of [15], all filters in the Inception model are learned. Furthermore, Inception layers are repeated many time, leading to a 22-layer deep model in the case of the GoogLeNet model.
+
+Network-in-Network is an approach proposed by \citep{DBLP:journals/corr/LinCY13} in order to increase the respresentational power of neural newtworks. When appliead to convolutional layers, the method could be viewd as addition $1\times1$ convolutional layers follwed typically by the rectified linear activation. 
+% This enables it to be easily integrated in the current ConvNet pipelines. We use this approach heavil in our architecture.
+
+\section{Background}
+In this section, we present a rough overview of deep learning and its hallmark achievements in various types of machine learning problems. After that, we provide a brief introduction to a typical ConvNet named AlexNet \citep{NIPS2012_4824} and its training strategy. Although ConvNets can be trained using unsupervised learning, we concentrate on the supervised learning strategy of training as our task (image classification) falls into this family.
+\subsection{Deep Learning}
+Deep-learning methods allow a machine to read raw data (e.g., pixel values of an image) and \emph{automatically} discover the representations needed for dectection or classification \citep{lecun:deeplearning}.
+
+Deep-learing models are composed of multiple processing layers, each can be considered as a non-linear feature transformation. Higher layers represents higher level of abstraction. 
+\subsection{Convolutional Neural Networks}
+ConvNets are hierarchical neural networks whose convolutional layers alternate with subsampling layers, reminiscent of simple and complex ceels in the primary visual cortex. ConvNets vary in how convolutional and subsample layer are realized and how they are trained.
+       \subsubsection{Convolutional Layer}
+       A convolutional layer is parametrized by the size and the number of maps, kernel sizes, skipping factors and the connection table. Each layer has M maps of equal size ($M_x, M_y$). A kernel of size ($K_x, K_y$) is shifted over the valid region of the input image (i.e. the kernel has be completely inside the image). The skipping factors $S_x$ and $S_y$ define how many pixels the filter/kernel skips in x- and y-direction between subsequent convolutions. The size of the output maps is then defined as:
+       \begin{equation}
+              M^n_x=\frac{M^{n-1}_x - K^n_x}{S^n_x + 1}+1; M^n_y=\frac{M^{n-1}_y - K^n_y}{S^n_y + 1}+1
+       \end{equation}
+       where index $n$ indicates the layer. Each map in layer $L^n$ is connected to at most $M^{n-1}$. Neurons of a given map share their weights but have different receptive fields.
+       \subsubsection{Pooling Layer}
+       The biggest architectural difference between our implementation and the ConvNet of [leCun et al] is the use of a max-pooling layer instead of a sub-smapling layer. No such layer is used by [Simard et al..] who simply skips nearby pixels prior to convolution, instead of pooling or averaging. 
+       \subsubsection{Classification Layer}
+
+\section{Experiments}
+In this section we give a detailed description of all the experiments we performed. We trained the AlexNet with the same architecture described in \citep{NIPS2012_4824}. [...] 
+       \subsection{The Dataset}
+       We used a crawler to collect ship images from different sources along with their meta information (name, category, etc.).
+       \subsection{Training AlexNet}
+              % \subsubsection{AlexNet}
+              AlexNet introduced by \citep{NIPS2012_4824} was the first work that popularized ConvNets in Computer Vision. It had shown outstanding performance on the ImageNet ILSVRC challenge in 2012 with top-5 error of 16\% (TODO: add top-1) compared to runner-up with 26\% error. The network has 60 million parameters and 500,000 neurons, consists of five convolutional layers, some of which are followed by max-pooling layers, and two globally connected layers with a final 1000-way softmax. The detail architecture of AlexNet is depicted in Fig. 1
+
+              % \subsubsection{VGGNet}
+              % VGGNet introduced by \citep{Simonyan14c} achieved the runner-up position in ImageNet ILSVRC 2014 challenge. Its main contribution was in showing that the depth of the network is a critical component for good performance. Their final best network contains 16 CONV/FC layers and, appealingly, features and extremely homogeneous archiecture that only performs 3x3 convolutions and 2x2 pooling from the begining to the end. It was later found that despite its slightly weaker classification performance, the VGG ConvNet features outperform those of GoogLeNet in multiple transfer learning tasks. Hence, the VGG network is currently the most preferred choice in the community when extracting CNN features from images. A disadvantage of the VGGNet is it is more expensive to evaluate and uses a lot more memor and parameters (140 million).
+
+              \begin{table}
+              \centering
+              \caption{Detail descriptions of VGGNet's layers}
+              \begin{tabular}{c|c|c|c} \hline
+                     Layer & Type & Maps and Neurons & Kernel\\ \hline
+                     0 & input & 
+              \end{tabular}
+              \end{table}
+       \subsection{Results}
+\section{Conclusions}
+
+%\end{document}  % This is where a 'short' article might terminate
+
+%ACKNOWLEDGMENTS are optional
+\section{Acknowledgments}
+We would like to thank Assoc. Prof., St\'{e}phane Bressan at School of Computing, National University of Singapore and Dr. Antoine Veillard at Image Persuasive Lab (IPAL), Insitute of Infocomm Research (I2R), A*STAR for insightful supervision and valuable discussions throughout the work of this paper. 
+
+%
+% The following two commands are all you need in the
+% initial runs of your .tex file to
+% produce the bibliography for the citations in your paper.
+\bibliographystyle{abbrv}
+\bibliography{dlbib}  % sigproc.bib is the name of the Bibliography in this case
+% You must have a proper ".bib" file
+%  and remember to run:
+% latex bibtex latex latex
+% to resolve all references
+%
+% ACM needs 'a single self-contained file'!
+%
+%APPENDICES are optional
+%\balancecolumns
+% \appendix
+% %Appendix A
+% \section{Headings in Appendices}
+% The rules about hierarchical headings discussed above for
+% the body of the article are different in the appendices.
+% In the \textbf{appendix} environment, the command
+% \textbf{section} is used to
+% indicate the start of each Appendix, with alphabetic order
+% designation (i.e. the first is A, the second B, etc.) and
+% a title (if you include one).  So, if you need
+% hierarchical structure
+% \textit{within} an Appendix, start with \textbf{subsection} as the
+% highest level. Here is an outline of the body of this
+% document in Appendix-appropriate form:
+% \subsection{Introduction}
+% \subsection{The Body of the Paper}
+% \subsubsection{Type Changes and  Special Characters}
+% \subsubsection{Math Equations}
+% \paragraph{Inline (In-text) Equations}
+% \paragraph{Display Equations}
+% \subsubsection{Citations}
+% \subsubsection{Tables}
+% \subsubsection{Figures}
+% \subsubsection{Theorem-like Constructs}
+% \subsubsection*{A Caveat for the \TeX\ Expert}
+% \subsection{Conclusions}
+% \subsection{Acknowledgments}
+% \subsection{Additional Authors}
+% This section is inserted by \LaTeX; you do not insert it.
+% You just add the names and information in the
+% \texttt{{\char'134}additionalauthors} command at the start
+% of the document.
+% \subsection{References}
+% Generated by bibtex from your ~.bib file.  Run latex,
+% then bibtex, then latex twice (to resolve references)
+% to create the ~.bbl file.  Insert that ~.bbl file into
+% the .tex source file and comment out
+% the command \texttt{{\char'134}thebibliography}.
+% % This next section command marks the start of
+% % Appendix B, and does not continue the present hierarchy
+% \section{More Help for the Hardy}
+% The sig-alternate.cls file itself is chock-full of succinct
+% and helpful comments.  If you consider yourself a moderately
+% experienced to expert user of \LaTeX, you may find reading
+% it useful but please remember not to change it.
+%\balancecolumns % GM June 2007
+% That's all folks!
+\end{document}
